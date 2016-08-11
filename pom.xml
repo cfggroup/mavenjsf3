@@ -2,7 +2,7 @@
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>ejemplomavenjsf2</groupId>
-	<artifactId>mavenjsf3</artifactId>
+	<artifactId>mavenjsf4</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<packaging>war</packaging>
 	<name>jsf2</name>
@@ -41,13 +41,13 @@
     <profile>
         <id>openshift</id>
         <build>
-            <finalName>mavenjsf3</finalName>
+            <finalName>mavenjsf4</finalName>
             <plugins>
                 <plugin>
                     <artifactId>maven-war-plugin</artifactId>
                     <version>2.4</version>
                     <configuration>
-                        <outputDirectory>webapps</outputDirectory>
+                        <outputDirectory>src/main/webapps</outputDirectory>
                         <warName>ROOT</warName>
                     </configuration>
                 </plugin>
