@@ -38,21 +38,43 @@
 		</repository>
 	</repositories>
 	<profiles>
-    <profile>
-        <id>openshift</id>
-        <build>
-            <finalName>mavenjsf4</finalName>
-            <plugins>
-                <plugin>
-                    <artifactId>maven-war-plugin</artifactId>
-                    <version>2.4</version>
-                    <configuration>
-                        <outputDirectory>src/main/webapps</outputDirectory>
-                        <warName>ROOT</warName>
-                    </configuration>
-                </plugin>
-            </plugins>
-        </build>
-    </profile>
-  </profiles>
+		<profile>
+			<id>openshift</id>
+			<build>
+				<finalName>${project.artifactId}</finalName>
+				<plugins>
+					<plugin>
+						<groupId>org.apache.maven.plugins</groupId>
+						<artifactId>maven-war-plugin</artifactId>
+						<version>2.4</version>
+						<configuration>
+							<failOnMissingWebXml>false</failOnMissingWebXml>
+							<outputDirectory>deployments</outputDirectory>
+							<warName>ROOT</warName>
+						</configuration>
+					</plugin>
+				</plugins>
+			</build>
+		</profile>
+		<profile>
+			<activation>
+				<activeByDefault>true</activeByDefault>
+			</activation>
+			<build>
+				<plugins>
+					<!-- WildFly plugin to deploy war -->
+					<plugin>
+						<groupId>org.wildfly.plugins</groupId>
+						<artifactId>wildfly-maven-plugin</artifactId>
+						<version>${version.wildfly.maven.plugin}</version>
+						<configuration>
+							<skip>false</skip>
+						</configuration>
+					</plugin>
+
+				</plugins>
+			</build>
+
+		</profile>
+	</profiles>
 </project>
