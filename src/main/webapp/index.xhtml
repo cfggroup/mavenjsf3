@@ -7,15 +7,12 @@
     xmlns:f="http://java.sun.com/jsf/core"
     xmlns:p="http://primefaces.org/ui">
 
-<f:loadBundle basename="resources.application" var="msg"/>
-
 <head>
-    <title><h:outputText value="#{msg.welcomeTitle}" /></title>
+    <title>Prueba</title>
 </head>
 
 <body>
-<h3><h:outputText value="#{msg.welcomeHeading}" /></h3>
-<p><h:outputText value="#{msg.welcomeMessage}" /></p>
+
 <h:form>
     <h:inputText id="name" value="#{name}" placeholder="What's your name?" />
     <h:commandButton value="Submit" />
