@@ -6,6 +6,18 @@
 	<version>0.0.1-SNAPSHOT</version>
 	<packaging>war</packaging>
 	<name>jsf2</name>
+	
+	<properties>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<project.reporting.outputEncoding>${project.build.sourceEncoding}</project.reporting.outputEncoding>
+
+		<!-- enable / disable Unit Tests -->
+		<ut.maven.test.skip>false</ut.maven.test.skip>
+
+		<!-- enable / disable Integration Tests -->
+		<it.maven.test.skip>false</it.maven.test.skip>
+</properties>
+	
 	<dependencies>
 		<dependency>
 			<groupId>org.jboss.spec</groupId>
