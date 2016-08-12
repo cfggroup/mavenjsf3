@@ -6,7 +6,7 @@
 	<version>0.0.1-SNAPSHOT</version>
 	<packaging>war</packaging>
 	<name>jsf2</name>
-	
+
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<project.reporting.outputEncoding>${project.build.sourceEncoding}</project.reporting.outputEncoding>
@@ -16,8 +16,8 @@
 
 		<!-- enable / disable Integration Tests -->
 		<it.maven.test.skip>false</it.maven.test.skip>
-</properties>
-	
+	</properties>
+
 	<dependencies>
 		<dependency>
 			<groupId>org.jboss.spec</groupId>
@@ -34,6 +34,12 @@
 			<groupId>org.primefaces.themes</groupId>
 			<artifactId>all-themes</artifactId>
 			<version>1.0.10</version>
+		</dependency>
+		<dependency>
+			<groupId>net.bootsfaces</groupId>
+			<artifactId>bootsfaces</artifactId>
+			<version>0.9.1</version>
+			<scope>compile</scope>
 		</dependency>
 	</dependencies>
 

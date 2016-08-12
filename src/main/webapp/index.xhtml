@@ -17,14 +17,6 @@
 		<h:inputText id="name" value="#{name}" placeholder="What's your name?" />
 		<h:commandButton value="Submit" />
 		<h:outputText value="Hola, #{name}" rendered="#{not empty name}" />
-		<style>
-div.scroll {
-	position: relative;
-	height: 100%;
-	overflow: hidden;
-	width: 100%;
-}
-</style>
 		<b:navBar position="top" sticky="true" brandHref="#"
 			brand=" CONUNDRUM Financial Group" inverse="true"
 			brandImg="./imgs/4_PROPUESTA LOGO_colores.png" id="nb"
@@ -88,26 +80,26 @@ div.scroll {
 						<p>Learn more about our philosophy and vision of the business.
 						</p>
 						<p>
-							<p:button outcome="aboutus.xhtml" value="View details »" />
+							<b:button outcome="aboutus.xhtml" value="View details »" />
 						</p>
 					</b:column>
 					<b:column col-sm="2">
-						<a href="aboutus.xhtml" title="About Us"><p:image
+						<a href="aboutus.xhtml" title="About Us"><b:image
 								alt="Our Services" value="./imgs/extern_moetesbokning.jpg;"
-								style="width:87%"></p:image></a>
+								style="width:87%"></b:image></a>
 					</b:column>
 					<b:column col-md="4">
 						<h2>Services</h2>
 						<p>Access our services section in which you can get the
 							supports of our customers.</p>
 						<p>
-							<p:button outcome="invoice.xhtml" value="View details »" />
+							<b:button outcome="invoice.xhtml" value="View details »" />
 						</p>
 					</b:column>
 					<b:column col-sm="2">
-						<a href="invoice.xhtml" title="Our Services"><p:image
+						<a href="invoice.xhtml" title="Our Services"><b:image
 								value="./imgs/top-colleges-offer-degrees-accounting_tiny2.jpg;"
-								style="width:80%"></p:image></a>
+								style="width:80%"></b:image></a>
 					</b:column>
 				</b:row>
 			</div>
