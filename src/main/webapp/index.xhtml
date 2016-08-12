@@ -4,8 +4,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml"
 	xmlns:h="http://java.sun.com/jsf/html"
 	xmlns:f="http://java.sun.com/jsf/core"
-	xmlns:p="http://primefaces.org/ui" 
-	xmlns:b="http://bootsfaces.net/ui">
+	xmlns:p="http://primefaces.org/ui" xmlns:b="http://bootsfaces.net/ui">
 
 <h:head>
 	<title>CFG Conundrum Financial Group</title>
@@ -17,6 +16,56 @@
 		<h:inputText id="name" value="#{name}" placeholder="What's your name?" />
 		<h:commandButton value="Submit" />
 		<h:outputText value="Hola, #{name}" rendered="#{not empty name}" />
+		<br/>
+
+		<p:menubar>
+			<p:submenu label="File" icon="ui-icon-document">
+				<p:submenu label="New" icon="ui-icon-contact">
+					<p:menuitem value="Project" url="#" />
+					<p:menuitem value="Other" url="#" />
+				</p:submenu>
+				<p:menuitem value="Open" url="#" />
+				<p:separator />
+				<p:menuitem value="Quit" url="#" />
+			</p:submenu>
+
+			<p:submenu label="Edit" icon="ui-icon-pencil">
+				<p:menuitem value="Undo" url="#" icon="ui-icon-arrowreturnthick-1-w" />
+				<p:menuitem value="Redo" url="#" icon="ui-icon-arrowreturnthick-1-e" />
+			</p:submenu>
+
+			<p:submenu label="Help" icon="ui-icon-help">
+				<p:menuitem value="Contents" url="#" />
+				<p:submenu label="Search" icon="ui-icon-search">
+					<p:submenu label="Text">
+						<p:menuitem value="Workspace" url="#" />
+					</p:submenu>
+					<p:menuitem value="File" url="#" />
+				</p:submenu>
+			</p:submenu>
+
+			<p:submenu label="Actions" icon="ui-icon-gear">
+				<p:submenu label="Ajax" icon="ui-icon-refresh">
+					<p:menuitem value="Save" actionListener="#{menuView.save}"
+						icon="ui-icon-disk" update="messages" />
+					<p:menuitem value="Update" actionListener="#{menuView.update}"
+						icon="ui-icon-arrowrefresh-1-w" update="messages" />
+				</p:submenu>
+				<p:submenu label="Non-Ajax" icon="ui-icon-newwin">
+					<p:menuitem value="Delete" actionListener="#{menuView.delete}"
+						icon="ui-icon-close" update="messages" ajax="false" />
+				</p:submenu>
+			</p:submenu>
+
+			<p:menuitem value="Quit" url="http://www.primefaces.org"
+				icon="ui-icon-close" />
+
+			<f:facet name="options">
+				<p:inputText style="margin-right:10px" placeholder="Search" />
+				<p:commandButton type="button" value="Logout" icon="ui-icon-extlink" />
+			</f:facet>
+		</p:menubar>
+
 		<b:navBar position="top" sticky="true" brandHref="#"
 			brand=" CONUNDRUM Financial Group" inverse="true"
 			brandImg="./imgs/4_PROPUESTA LOGO_colores.png" id="nb"
@@ -56,20 +105,17 @@
 			</b:carouselItem>
 		</b:carousel>
 		<br />
-	
+
 		<b:container id="scrollable">
 			<div id="home" class="container-fluid">
 				<div style="height: 150px">
 					<b:row>
 						<b:column col-sm="12">
-							<h3>
-								Ensure and facilitate access to financial
-									credit to all businesses and / or individuals seeking the
-									support of a solid , serious and responsible entity to serve as
-									a guarantee of the commitments made by them , generating the
-									confidence to seek different financial institutions , it is our
-									main goal.
-							</h3>
+							<h3>Ensure and facilitate access to financial credit to all
+								businesses and / or individuals seeking the support of a solid ,
+								serious and responsible entity to serve as a guarantee of the
+								commitments made by them , generating the confidence to seek
+								different financial institutions , it is our main goal.</h3>
 						</b:column>
 					</b:row>
 				</div>
@@ -107,14 +153,12 @@
 		<br />
 	</h:form>
 </h:body>
-<footer style="background-color: black; height: 70px;">
-	<b:container>
-		<b:row>
-			<b:column>
-				<p style="color: white; padding-top: 10px;" align="right">©
-					Copyright CFG 2016</p>
-			</b:column>
-		</b:row>
-	</b:container>
-</footer>
+<footer style="background-color: black; height: 70px;"> <b:container>
+	<b:row>
+		<b:column>
+			<p style="color: white; padding-top: 10px;" align="right">©
+				Copyright CFG 2016</p>
+		</b:column>
+	</b:row>
+</b:container> </footer>
 </html>
