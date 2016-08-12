@@ -1,0 +1,13 @@
+Manifest-Version: 1.0
+Built-By: BootsFaces OSP Gradle builder.
+Gradle-Version: 2.13
+Created-By: 1.8.0_91 (Oracle Corporation 25.91-b14)
+Bundle-Name: BootsFaces
+Bundle-Version: 0.8.6
+Bundle-Date: 20160522-21:44:31
+Implementation-Title: BootsFaces
+Implementation-Version: 0.8.6
+Implementation-Vendor: TheCoder4.eu
+Implementation-Vendor-Id: eu.thecoder4
+Implementation-URL: http://www.bootsfaces.net
+
