@@ -1,6 +1,6 @@
 Manifest-Version: 1.0
 Implementation-Title: BootsFaces
-Bundle-Date: 20160816-13:08:45
+Bundle-Date: 20160816-13:48:18
 Implementation-Version: 0.9.2-SNAPSHOT
 Built-By: BootsFaces OSP Maven builder.
 Implementation-Vendor-Id: eu.thecoder4
