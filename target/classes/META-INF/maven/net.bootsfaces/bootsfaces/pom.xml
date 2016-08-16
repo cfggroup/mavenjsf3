@@ -158,7 +158,11 @@
 		</plugins>
 
 		<!-- resources -->
-		
+		<resources>
+			<resource>
+				<directory>src/main/resources</directory>
+			</resource>
+		</resources>
 	</build>
 
 	<!-- PROFILES SECTION -->
