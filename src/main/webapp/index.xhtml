@@ -4,7 +4,8 @@
 <html xmlns="http://www.w3.org/1999/xhtml"
 	xmlns:h="http://java.sun.com/jsf/html"
 	xmlns:f="http://java.sun.com/jsf/core"
-	xmlns:p="http://primefaces.org/ui">
+	xmlns:p="http://primefaces.org/ui" 
+	xmlns:b="http://bootsfaces.net/ui">
 
 <h:head>
 	<title>CFG Conundrum Financial Group</title>
@@ -16,28 +17,59 @@
 		<h:inputText id="name" value="#{name}" placeholder="What's your name?" />
 		<h:commandButton value="Submit" />
 		<h:outputText value="Hola, #{name}" rendered="#{not empty name}" />
-		<br/>
-		<p:growl id="messages"/>
-		<p:menubar>
-			<p:menuitem value="Home" url="#" />
-			<p:menuitem value="About Us" url="aboutus.xhtml" />
-			<p:submenu label="Our Services">
-				<p:menuitem value="Invoice" url="invoice.xhtml" />
-			</p:submenu>
-		</p:menubar>
-
+		<b:navBar position="top" sticky="true" brandHref="#"
+			brand=" CONUNDRUM Financial Group" inverse="true"
+			brandImg="./imgs/4_PROPUESTA LOGO_colores.png" id="nb"
+			brandImgStyle="width:70px">
+			<b:navbarLinks pull="right">
+				<b:navLink value="Home" href="#home" icon-awesome="home"></b:navLink>
+				<b:navLink value="About Us" href="aboutus.xhtml"></b:navLink>
+				<b:dropMenu value="Our Services">
+					<b:navLink value="Invoice" href="invoice.xhtml"></b:navLink>
+				</b:dropMenu>
+				<!--  <b:navLink value="Contact" href="#contact"></b:navLink> -->
+			</b:navbarLinks>
+		</b:navBar>
+		<b:carousel id="intro" disabled="true">
+			<b:carouselItem style="padding-left:0%">
+				<img height="200px" width="100%"
+					src="./imgs/shakinghandsjumbotron0_srcset-large.jpg" />
+				<b:carouselCaption>
+					<h3>Commitment</h3>
+					<p></p>
+				</b:carouselCaption>
+			</b:carouselItem>
+			<b:carouselItem style="padding-left:0%">
+				<img height="200px" width="100%"
+					src="./imgs/banner_sustainability.jpg" />
+				<b:carouselCaption>
+					<h3>Sustainability</h3>
+					<p></p>
+				</b:carouselCaption>
+			</b:carouselItem>
+			<b:carouselItem style="padding-left:0%">
+				<img height="200px" width="100%" src="./imgs/banner_integrity.jpg" />
+				<b:carouselCaption>
+					<h3>Integrity</h3>
+					<p></p>
+				</b:carouselCaption>
+			</b:carouselItem>
+		</b:carousel>
 		<br />
-
-		
-			<!--  <div id="home" class="container-fluid">
+	
+		<b:container id="scrollable">
+			<div id="home" class="container-fluid">
 				<div style="height: 150px">
 					<b:row>
 						<b:column col-sm="12">
-							<h3>Ensure and facilitate access to financial credit to all
-								businesses and / or individuals seeking the support of a solid ,
-								serious and responsible entity to serve as a guarantee of the
-								commitments made by them , generating the confidence to seek
-								different financial institutions , it is our main goal.</h3>
+							<h3>
+								Ensure and facilitate access to financial
+									credit to all businesses and / or individuals seeking the
+									support of a solid , serious and responsible entity to serve as
+									a guarantee of the commitments made by them , generating the
+									confidence to seek different financial institutions , it is our
+									main goal.
+							</h3>
 						</b:column>
 					</b:row>
 				</div>
@@ -70,17 +102,19 @@
 								style="width:80%"></b:image></a>
 					</b:column>
 				</b:row>
-			</div>-->
-	
+			</div>
+		</b:container>
 		<br />
 	</h:form>
 </h:body>
-<footer style="background-color: black; height: 70px;"> 
-	<!--  <b:row>
-		<b:column>
-			<p style="color: white; padding-top: 10px;" align="right">©
-				Copyright CFG 2016</p>
-		</b:column>
-	</b:row>-->
+<footer style="background-color: black; height: 70px;">
+	<b:container>
+		<b:row>
+			<b:column>
+				<p style="color: white; padding-top: 10px;" align="right">©
+					Copyright CFG 2016</p>
+			</b:column>
+		</b:row>
+	</b:container>
 </footer>
 </html>

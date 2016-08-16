@@ -160,12 +160,7 @@
 		<!-- resources -->
 		<resources>
 			<resource>
-				<directory>mavenResources/META-INF</directory>
-				<targetPath>META-INF</targetPath>
-			</resource>
-			<resource>
-				<directory>src/main/meta/META-INF</directory>
-				<targetPath>META-INF</targetPath>
+				<directory>src/main/resources</directory>
 			</resource>
 		</resources>
 	</build>
